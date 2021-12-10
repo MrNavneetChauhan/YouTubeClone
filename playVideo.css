@@ -1,0 +1,28 @@
+#contentContainer{
+    border: 1px solid black;
+    display: flex;
+    height: 100%;
+}
+
+#contentContainer >div:first-child{
+    /* border: 1px solid red; */
+    width: 70%;
+    height: 450px;
+}
+
+#contentContainer >div:last-child{
+    border: 1px solid blue;
+    width: 30%;
+    height: 800px;
+}
+
+#iframe{
+    width: 100%;
+    height: 100%;
+}
+
+#iframeVideo{
+    width: 100%;
+    height: 100%;
+}
+

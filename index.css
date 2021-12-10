@@ -1,0 +1,273 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #navContainer {
+    display: flex;
+  }
+  #navContainer > div:first-child {
+    /* border: 1px solid black; */
+    width: 80px;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+  }
+
+  #navContainer > div:last-child {
+    /* border: 1px solid black; */
+    width: 93%;
+    height: 60px;
+    position: fixed;
+    left: 85px;
+  }
+
+  #menu {
+    /* border: 1px solid black; */
+    width: 30px;
+    height: 30px;
+    margin-top: 20px;
+    line-height: 10px;
+    cursor: pointer;
+  }
+
+  #menu > hr {
+    height: 1px;
+    border: none;
+    border-bottom: 1px solid black;
+    margin: 5px;
+  }
+
+  #icon-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* border: 1px solid blue; */
+    width: 80%;
+    height: 80%;
+    align-items: center;
+  }
+  #icon-box p {
+    font-size: 11px;
+  }
+
+  #icon-box > div {
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 50px;
+    text-align: center;
+  }
+  #icon-box > div > span {
+    cursor: pointer;
+  }
+  #logo {
+    /* border: 1px solid black; */
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+    margin-left: 20px;
+  }
+  #logo > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  #navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-bottom: 1px solid rgba(233, 230, 230, 0.493) ;
+    /* border: 1px solid green; */
+  }
+  #searchBar {
+    /* border: 1px solid red; */
+    width: 650px;
+    margin-left: 60px;
+  }
+  #searchBar > div {
+    display: flex;
+  }
+
+  #right-logos-div {
+    /* border: 1px solid green; */
+    width: 220px;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  #search {
+    width: 90%;
+    height: 40px;
+    outline: none;
+    font-size: 20px;
+    padding-left: 5px;
+    border: 1px solid rgb(204, 199, 199);
+  }
+  #search-icon-box{
+      border: 1px solid gray;
+      width: 70px;
+      display:grid;
+      place-items: center;
+      background-color: rgba(233, 230, 230, 0.493);
+      border-left: none;
+      cursor: pointer;
+      border: 1px solid rgb(204, 199, 199);
+      border-left: none;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+  }
+
+  #mic-box{
+      /* border: 1px solid blue; */
+      width: 45px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background-color: rgba(233, 230, 230, 0.493);
+      margin-left:10px;
+      cursor: pointer;
+
+  }
+  .sz{
+      font-size: 30px;
+      font-weight: lighter;
+  }
+
+  #sign-in{
+      display: flex;
+      color: #3e76d4;
+      border: 1px solid #3e76d4;
+      width: 90px;
+      height: 40px;
+      align-items: center;
+      justify-content: center;
+  }
+  #inputBox{
+    border: 1px solid rgb(204, 199, 199);
+      width: 535px;
+      height: 400px;
+      position: fixed;
+      background-color: black;
+      visibility: hidden;
+  }
+  #contentContainer{
+    /* border: 1px solid black; */
+    width: 93%;
+    margin-left: 85px;
+    margin-top: 60px;
+    height: 500px;
+  }
+  #tabBar{
+    border-bottom: 1px solid rgb(204, 199, 199);
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    padding: 10px;
+    align-items: center;
+  }
+  #tabBar>div{
+    border: 1px solid rgb(204, 199, 199);
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+    padding: 5px;
+    cursor: pointer;
+    background-color: rgb(241, 238, 238);
+    
+  }
+
+  #displayContent{
+      /* border: 1px solid black; */
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      gap: 20px;
+  }
+
+  #thumbDiv{
+      /* border: 1px solid green; */
+      cursor: pointer;
+      /* height: 250px; */
+  }
+  #thumbImg{
+      width: 100%;
+      height: 55%;  
+      object-fit: cover;
+  }
+
+
+  #titleAndLogoDiv{
+      height: 20%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      /* align-items: center; */
+  }
+
+  #logoDiv{
+      height: 50px;
+      width: 50px;
+      border: 3px solid maroon;
+      border-radius: 50%;
+  }
+
+  #logoImg{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+  }
+  #videoTitle{
+      width: 240px;
+      font-size: 13px;
+      /* border: 1px solid pink; */
+      display: flex;
+      font-weight: bold;
+  }
+
+  #channelNameText{
+      color:gray;
+      margin: 0;
+      /* border: 1px solid black; */
+      height: 10%;
+      font-size: 13px;
+      display: flex;
+      flex-wrap: wrap;
+      width: 240px;
+      margin-left: 60px;
+      flex-direction: column;
+  }
+
+  #channelNameDiv{
+      /* border: 1px solid red; */
+      display: flex;
+      height: 7%;
+      font-size: 12px;
+  }
+
+  #viewsAndDaysDiv{
+      /* border: 1px solid red; */
+      height: 7%;
+      width: 50%;
+      font-size: 12px;
+      display: flex;
+      justify-content: space-around;
+      color: gray;
+      margin-left: 55px;
+  }
+
+
+
+
+
+
+
+
+
+  
