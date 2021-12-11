@@ -16,12 +16,14 @@ DSA.addEventListener("click",showAll11)
 
 let qSearch = JSON.parse(localStorage.getItem("searched")) || "NASA";
 
-let key = `AIzaSyD41hkSAxKHA9hdnkguwHgdIdYsqwn7m9k`
-// let key = `AIzaSyCVVszc0u-8aUBeMJEk9V05dJPWeFGS-B0`
+// let key = `AIzaSyD41hkSAxKHA9hdnkguwHgdIdYsqwn7m9k`
+let key = `AIzaSyCVVszc0u-8aUBeMJEk9V05dJPWeFGS-B0`
 // let key = `AIzaSyBvt7iWnHLeRYtik2Vyb0Eqc8D1Zs44XxA`;
 // let key = `AIzaSyDuYvMbXPnVVI2ef8o2pvhG1xgjlsHKSIg`
 // let key = `AIzaSyDxLeAHaW7iAPosvEHn4UqzWIdCNb29dMU`
-let url = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&order=viewCount&q=${qSearch}&key=${key}&type=video&maxResults=30`
+// let key = `AIzaSyC7gR712tr_ZIszHk-xEJGz7oO65daeQ20`
+// let key = `AIzaSyAvAgJEWS5JlDu-MFT2WOCFBTzzYtjp5kU`;
+let url = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&order=viewCount&q=${qSearch}&key=${key}&type=video&maxResults=30`;
 
 
     let response = await fetch(url)
@@ -77,7 +79,7 @@ viewsAndDaysDiv.setAttribute("id","viewsAndDaysDiv");
 let viewsEle = document.createElement("p");
 let views = Math.floor(Math.random()*6500)+"K views    • ";
 let daysEle = document.createElement("span");
-let daysAgo = Math.floor(Math.random()*25)+"day ago"
+let daysAgo = Math.floor(Math.random()*25)+" day ago"
 viewsEle.setAttribute("id","viewEle");
 daysEle.setAttribute("id","daysEle");
 
@@ -199,12 +201,59 @@ function showAll11(){
 search.addEventListener("keypress",showInputBox)
 // inputBox.addEventListener("click",showInputBox)
 search.addEventListener("keydown",hideInputBox)
+search.addEventListener("input",function(){
+   deboucing(displaySearchResult,1500)
+})
 
-function showInputBox(){
+async function showInputBox(){
     inputBox.style.visibility = "visible"
 }
-
 
 function hideInputBox(){
     inputBox.style.visibility = "hidden"
 }
+
+async function searchMovies(){
+    qSearch = search.value;
+    url = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&order=viewCount&q=${qSearch}&key=${key}&type=video&maxResults=30`
+
+  let respo = await fetch(url);
+  let collect = await respo.json();
+  
+  return collect.items
+  
+}
+
+
+async function displaySearchResult(){
+   let data = await searchMovies()
+   data.map((items)=>{
+      // console.log(items)
+      let {id,snippet} = items;
+      console.log(id)
+      console.log(snippet)
+      let{title} = snippet;
+
+      let searchEle = document.createElement("p");
+      searchEle.textContent = title;
+      inputBox.append(searchEle)
+
+      searchEle.addEventListener("click",function(){
+        showSearchResults(data)
+     })
+   })
+}
+
+let id;
+function deboucing(func,time){
+   clearTimeout(id)
+   id = setTimeout(function(){
+      func()
+   },time)
+}
+
+function showSearchResults(data){
+    localStorage.setItem("searchData",JSON.stringify(data))
+    window.location.href = "search.html";
+    }
+// now lets work on the search results show at the inputBox.. 

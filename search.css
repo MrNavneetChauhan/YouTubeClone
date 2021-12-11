@@ -1,0 +1,93 @@
+#contentContainer{
+    background-color: rgba(248, 241, 241, 0.342);
+    padding: 15px;
+}
+
+#searchedContentDiv{
+    /* border: 1px solid black; */
+    width: 85%;
+    margin: auto;
+    height: 220px;
+    display: flex;
+    margin-bottom: 15px;
+    gap: 20px;
+    cursor: pointer;
+
+}
+ 
+#searchedContentDiv>div{
+    /* border: 1px solid black; */
+    height: 100%;
+}
+
+#firstDiv{
+    width: 35%;
+}
+
+#secondDiv{
+    width: 65%;
+}
+
+#image{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+hr{
+    width: 85%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+#filter{
+    margin-top: 20px;
+    margin-left: 95px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#viewsAnddaysDiv{
+display: flex;
+/* border: 1px solid green; */
+font-size: 12px;
+font-weight: 500;
+margin-bottom: 10px;
+color: gray;
+letter-spacing: 1px;
+}
+
+#channelLogoDiv{
+    /* border: 1px solid red; */
+    height: 45px;
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+#channelLogo{
+    height: 100%;
+    border-radius: 50%;
+}
+
+
+
+#titleEle{
+    color: black;
+    font-size: 15px;
+    font-weight: 550;
+}
+
+#descriptionEle{
+    color: gray;
+    font-size: 14px;
+}
+
+
+
+
+

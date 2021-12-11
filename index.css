@@ -154,7 +154,7 @@
       width: 535px;
       height: 400px;
       position: fixed;
-      background-color: black;
+      background-color: white;
       visibility: hidden;
   }
   #contentContainer{
@@ -264,6 +264,22 @@
 
 
 
+  #inputBox{
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+}
+
+#inputBox>p{
+    color: blue;
+    font-weight: 600;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#inputBox>p:hover{
+    background-color: rgb(245, 238, 238);
+}
 
 
 
