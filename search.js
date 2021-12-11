@@ -37,7 +37,7 @@ data.map(async(item)=>{
    // lets find the logo of the channel
 
 
-let channelUrl = `https://www.googleapis.com/youtube/v3/channels?id=${channelId}&key=${key}&type=video&part=snippet&maxResult=30`
+let channelUrl = `https://www.googleapis.com/youtube/v3/channels?id=${channelId}&key=${key}&type=video&part=snippet&maxResult=50`
 
 
 let respo = await fetch(channelUrl);
@@ -116,7 +116,7 @@ search.addEventListener("input",showInputBox)
 // inputBox.addEventListener("click",showInputBox)
 search.addEventListener("keydown",hideInputBox)
 search.addEventListener("input",function(){
-   deboucing(displaySearchResult,1500)
+   deboucing(displaySearchResult,800)
 })
 
 async function showInputBox(){

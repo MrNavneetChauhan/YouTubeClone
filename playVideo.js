@@ -302,7 +302,7 @@ function hideInputBox(){
 
 async function searchMovies(){
    let qSearch = search.value;
-   let url = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&order=viewCount&q=${qSearch}&key=${key}&type=video&maxResults=30`
+   let url = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&order=viewCount&q=${qSearch}&key=${key}&type=video&maxResults=50`
 
   let respo = await fetch(url);
   let collect = await respo.json();

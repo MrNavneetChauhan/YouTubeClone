@@ -23,7 +23,7 @@ let key = `AIzaSyCVVszc0u-8aUBeMJEk9V05dJPWeFGS-B0`
 // let key = `AIzaSyDxLeAHaW7iAPosvEHn4UqzWIdCNb29dMU`
 // let key = `AIzaSyC7gR712tr_ZIszHk-xEJGz7oO65daeQ20`
 // let key = `AIzaSyAvAgJEWS5JlDu-MFT2WOCFBTzzYtjp5kU`;
-let url = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&order=viewCount&q=${qSearch}&key=${key}&type=video&maxResults=30`;
+let url = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&order=viewCount&q=${qSearch}&key=${key}&type=video&maxResults=50`;
 
 
     let response = await fetch(url)
@@ -58,7 +58,7 @@ let videoTitle = document.createElement("p");
 videoTitle.setAttribute("id","videoTitle");
 
 
-let channelUrl = `https://www.googleapis.com/youtube/v3/channels?id=${channelId}&key=${key}&type=video&part=snippet&maxResult=30`
+let channelUrl = `https://www.googleapis.com/youtube/v3/channels?id=${channelId}&key=${key}&type=video&part=snippet&maxResult=50`
 
 let respo = await fetch(channelUrl);
 // console.log(respo)
@@ -202,7 +202,7 @@ search.addEventListener("keypress",showInputBox)
 // inputBox.addEventListener("click",showInputBox)
 search.addEventListener("keydown",hideInputBox)
 search.addEventListener("input",function(){
-   deboucing(displaySearchResult,1500)
+   deboucing(displaySearchResult,800)
 })
 
 async function showInputBox(){
@@ -215,7 +215,7 @@ function hideInputBox(){
 
 async function searchMovies(){
     qSearch = search.value;
-    url = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&order=viewCount&q=${qSearch}&key=${key}&type=video&maxResults=30`
+    url = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&order=viewCount&q=${qSearch}&key=${key}&type=video&maxResults=50`
 
   let respo = await fetch(url);
   let collect = await respo.json();
