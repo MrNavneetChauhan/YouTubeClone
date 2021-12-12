@@ -117,7 +117,7 @@ search.addEventListener("input",showInputBox)
 // inputBox.addEventListener("click",showInputBox)
 search.addEventListener("keydown",hideInputBox)
 search.addEventListener("input",function(){
-   deboucing(displaySearchResult,800)
+   deboucing(displaySearchResult,1000)
 })
 
 async function showInputBox(){
