@@ -1,7 +1,8 @@
 import navbar from "/navbar.js";
 Import.innerHTML = navbar();
 // let key = `AIzaSyCVVszc0u-8aUBeMJEk9V05dJPWeFGS-B0`
-let key = `AIzaSyD41hkSAxKHA9hdnkguwHgdIdYsqwn7m9k`
+// let key = `AIzaSyD41hkSAxKHA9hdnkguwHgdIdYsqwn7m9k`
+let key = `AIzaSyCK1hkk5-1Ojo2snAIhb-vqczrUPqKSJZY`
 logoimg.addEventListener("click",goToHome)
 function goToHome(){
    window.location.href="index.html"
