@@ -227,6 +227,7 @@ async function searchMovies(){
 
 async function displaySearchResult(){
    let data = await searchMovies()
+   inputBox.textContent = ""
    data.map((items)=>{
       // console.log(items)
       let {id,snippet} = items;
