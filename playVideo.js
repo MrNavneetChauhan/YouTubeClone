@@ -1,8 +1,8 @@
 import navbar from "/navbar.js";
 Import.innerHTML = navbar();
 // console.log("hlo")
-// let key = `AIzaSyD41hkSAxKHA9hdnkguwHgdIdYsqwn7m9k`
-let key = `AIzaSyCVVszc0u-8aUBeMJEk9V05dJPWeFGS-B0`
+let key = `AIzaSyD41hkSAxKHA9hdnkguwHgdIdYsqwn7m9k`
+// let key = `AIzaSyCVVszc0u-8aUBeMJEk9V05dJPWeFGS-B0`
 // let key = `AIzaSyBvt7iWnHLeRYtik2Vyb0Eqc8D1Zs44XxA`
 // let key = `AIzaSyC7gR712tr_ZIszHk-xEJGz7oO65daeQ20`
 logoimg.addEventListener("click",goToHome)
