@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+#container{
+    /* border: 1px solid black; */
+    width: 30%;
+    margin: 50px auto;
+    text-align: center;
+}
+
+input{
+    height: 25px;
+    margin: 5px;
+}
+
+button{
+    width: 150px;
+    height: 30px;
+    background-color: rgb(192, 19, 19);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="register-form">
+            <h1>Register</h1>
+            <form>
+                <input type="text" id="name" placeholder="Name">
+                
+                <input type="email" id="email" placeholder="Email">
+                
+                <input type="password" id="password" placeholder="Password">
+                
+                <input type="text" id="username" placeholder="Username">
+                
+                <input type="number" id="mobile" placeholder="Mobile">
+
+                <input type="text"  id="description" placeholder="Description">
+            </form>
+            <button onclick="Register()">Signup</button>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+   async function Register(){
+        // event.preventDefault();
+        let signup_data = {
+            name: document.getElementById("name").value,
+            email:document.getElementById("email").value,
+            password:document.getElementById("password").value,
+            username:document.getElementById("username").value,
+            number:document.getElementById("mobile").value,
+            description:document.getElementById("description").value
+        }
+
+        signup_data = JSON.stringify(signup_data)
+
+        let register_api = `https://masai-api-mocker.herokuapp.com/auth/register`
+
+       let respo = fetch(register_api,{
+            method:"POST",
+            body:signup_data,
+            headers:{
+                "Content-Type":"application/json",
+            },
+        });
+
+
+    }
+
+
+
+</script>

@@ -34,7 +34,7 @@ function navBar(){
         <!-- logo of the header -->
         <div id="logo">
           <img id="logoimg"
-            src="https://lh3.googleusercontent.com/NEfk60tG0hIl9Mnymkex5wNtbydbKZ8QJwU7zIpRDUNOT4sQQLcC4cFWoVeqGUDnluV7LQ=s170"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/YouTube_Logo_2017.svg/2560px-YouTube_Logo_2017.svg.png"
             alt=""
           />
         </div>

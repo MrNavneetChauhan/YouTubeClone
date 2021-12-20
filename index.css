@@ -148,6 +148,7 @@
       height: 40px;
       align-items: center;
       justify-content: center;
+      cursor: pointer;
   }
   #inputBox{
     border: 1px solid rgb(204, 199, 199);

@@ -16,8 +16,8 @@ DSA.addEventListener("click",showAll11)
 
 let qSearch = JSON.parse(localStorage.getItem("searched")) || "NASA";
 
-let key = `AIzaSyCK1hkk5-1Ojo2snAIhb-vqczrUPqKSJZY`
-// let key = `AIzaSyD41hkSAxKHA9hdnkguwHgdIdYsqwn7m9k`
+// let key = `AIzaSyCK1hkk5-1Ojo2snAIhb-vqczrUPqKSJZY`
+let key = `AIzaSyD41hkSAxKHA9hdnkguwHgdIdYsqwn7m9k`
 // let key = `AIzaSyCVVszc0u-8aUBeMJEk9V05dJPWeFGS-B0`
 // let key = `AIzaSyBvt7iWnHLeRYtik2Vyb0Eqc8D1Zs44XxA`;
 // let key = `AIzaSyDuYvMbXPnVVI2ef8o2pvhG1xgjlsHKSIg`
@@ -259,3 +259,8 @@ function showSearchResults(data){
     window.location.href = "search.html";
     }
 // now lets work on the search results show at the inputBox.. 
+
+const signIn = document.getElementById("sign-in")
+signIn.onclick = ()=>{
+    window.location.href = "authentication.html"
+}
