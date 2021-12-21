@@ -13,6 +13,7 @@ Thrillers.addEventListener("click",showAll9)
 ComputerAndInfo.addEventListener("click",showAll10)
 DSA.addEventListener("click",showAll11)
 
+let userName = JSON.parse(localStorage.getItem("userName"))
 
 let qSearch = JSON.parse(localStorage.getItem("searched")) || "NASA";
 
@@ -263,4 +264,8 @@ function showSearchResults(data){
 const signIn = document.getElementById("sign-in")
 signIn.onclick = ()=>{
     window.location.href = "authentication.html"
+}
+
+if(userName != undefined){
+    sign_in_text.textContent = userName
 }

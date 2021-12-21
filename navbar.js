@@ -67,7 +67,7 @@ function navBar(){
             <span class="material-icons-outlined">
                 account_circle
                 </span>
-                <p>Sign IN</p>
+                <p id="sign_in_text">Sign IN</p>
           </div>
         </div>
       </div>
