@@ -59,23 +59,25 @@ button{
             email:document.getElementById("email").value,
             password:document.getElementById("password").value,
             username:document.getElementById("username").value,
-            number:document.getElementById("mobile").value,
-            description:document.getElementById("description").value
+            mobile:document.getElementById("mobile").value,
+            description:document.getElementById("description").value,
         }
+        console.log(signup_data)
 
-        signup_data = JSON.stringify(signup_data)
+        // signup_data = JSON.stringify(signup_data)
 
         let register_api = `https://masai-api-mocker.herokuapp.com/auth/register`
 
-       let respo = fetch(register_api,{
+       let respo = await fetch(register_api,{
             method:"POST",
-            body:signup_data,
+            body:JSON.stringify(signup_data),
             headers:{
                 "Content-Type":"application/json",
             },
         });
 
-
+        let data = await respo.json();
+        console.log(data)
     }
 
 
